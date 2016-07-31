@@ -1,0 +1,28 @@
+{
+  "name": "node-beauty-mongo",
+  "version": "1.0.0",
+  "description": "MongoDB module for node-beauty",
+  "private": false,
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdwong/node-beauty-mongo.git"
+  },
+  "dependencies": {
+    "lodash": "*",
+    "mongodb": "*"
+  },
+  "keywords": [
+    "node-beauty",
+    "mongodb"
+  ],
+  "author": "Bun Wong <bunwong@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hdwong/node-beauty-mongo/issues"
+  },
+  "homepage": "https://github.com/hdwong/node-beauty-mongo#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
