@@ -1,6 +1,6 @@
 {
   "name": "node-beauty-mongo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MongoDB module for node-beauty",
   "private": false,
   "main": "index.js",
