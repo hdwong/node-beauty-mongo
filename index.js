@@ -102,6 +102,29 @@ let mongo = {
       mongo.assert(error);
       next(result);
     });
+  },
+  post_updated: function(req, res, next) {
+    if (req.body.collection === undefined ||
+        req.body.where === undefined ||
+        req.body.set === undefined) {
+      throw '参数错误';
+    }
+    var set, options, where;
+    try {
+      set = JSON.parse(req.body.set);
+      set = _.isArray(set) ? set : [set];
+      where = JSON.parse(req.body.where);
+      where = _.isArray(where) ? set : [where];
+      if (req.body.options) {
+        options = JSON.parse(req.body.options);
+      }
+    } catch (e) {
+      throw '参数错误';
+    }
+    db.collection(req.body.collection).insertMany(set, options, function(error, result) {
+      mongodb.assert(error);
+      next(result);
+    });
   }
 };
 
