@@ -122,7 +122,7 @@ let mongo = {
       throw '参数错误';
     }
     db.collection(req.body.collection).insertMany(set, options, function(error, result) {
-      mongodb.assert(error);
+      mongo.assert(error);
       next(result);
     });
   }
